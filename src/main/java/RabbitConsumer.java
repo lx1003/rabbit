@@ -34,7 +34,7 @@ public class RabbitConsumer {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                channel.basicAck(envelope.getDeliveryTag(),false);
+                channel.basicAck(envelope.getDeliveryTag(),false) ;
             }
         };
         channel.basicConsume(QUEUE_NAME,consumer);
